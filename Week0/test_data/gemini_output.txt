@@ -1,0 +1,5 @@
+{
+  "original_word_count": 148,
+  "summary_word_count": 96,
+  "summary": "The Information Technology Institute (ITI), established in 1993 and affiliated with the Ministry of Communications and Information Technology (MCIT) since 2005, is dedicated to ICT human capacity development. For over 30 years, ITI has maintained an 85% employment rate for its graduates by continuously updating its diverse training portfolio—which includes areas like development, data analytics, security, and game development—based on global tech trends and national projects. The institute serves thousands of young Egyptians from various academic backgrounds and governorates, leveraging its strong network with industry and academia to both enhance its curriculum and recruit talent nationwide."
+}
