@@ -1,1 +1,7 @@
 {"provider": "openai", "model": "gpt-4o-mini", "latency_ms": 5426, "tokens": {"prompt": 201, "completion": 112}, "cost_est": 9.7e-05, "req": "de40b7d3-5c22-4a00-a0c4-f2b3b0cd9e13"}
+{"provider": "openai", "model": "gpt-4o-mini", "latency_ms": 4688, "tokens": {"prompt": 201, "completion": 124}, "cost_est": 0.000105, "req": "15e0e1a4-ced2-403d-880b-067eadf9db1b"}
+{"provider": "openai", "model": "gpt-4o-mini", "latency_ms": 3088, "tokens": {"prompt": 180, "completion": 123}, "cost_est": 0.000101, "req": "785e7c00-ed7f-4b0f-9a33-5862e4379251"}
+{"provider": "openai", "model": "gpt-4o-mini", "latency_ms": 5064, "tokens": {"prompt": 180, "completion": 130}, "cost_est": 0.000105, "req": "c540f579-fa36-4f18-94d7-0734a43edb03"}
+{"provider": "openai", "model": "gpt-4o-mini", "latency_ms": 4514, "tokens": {"prompt": 177, "completion": 116}, "cost_est": 9.6e-05, "req": "2d8bc5ee-dbeb-4366-943c-c0974b517341"}
+{"provider": "openai", "model": "gpt-4o-mini", "latency_ms": 2926, "tokens": {"prompt": 177, "completion": 97}, "cost_est": 8.5e-05, "req": "851f55ac-2b8a-4780-8e08-d514592b63fa"}
+{"provider": "openai", "model": "gpt-4o-mini", "latency_ms": 4460, "tokens": {"prompt": 185, "completion": 116}, "cost_est": 9.7e-05, "req": "ebc5dfc2-34d7-4c57-9aff-8cd8fbaa60a5"}

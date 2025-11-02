@@ -1,1 +1,1 @@
-We are excited to announce our new AI-powered code completion tool that helps developers write better code faster. It uses machine learning to understand context and provide relevant suggestions in real-time.
+Explain simply what is meant by LangChain- with real simple example

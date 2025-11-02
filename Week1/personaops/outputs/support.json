@@ -1,0 +1,14 @@
+{
+  "title": "Understanding LangChain",
+  "body": "LangChain is a framework designed to simplify the development of applications that use language models. For example, imagine you want to create a chatbot that can answer questions about a specific topic. With LangChain, you can easily connect your language model to various data sources, allowing the chatbot to provide accurate and relevant answers based on real-time information.",
+  "style": "friendly_support",
+  "citations": [],
+  "moderation_flags": [],
+  "tokens": {
+    "prompt": 177,
+    "completion": 97
+  },
+  "latency_ms": 2926,
+  "cost_est": 8.5e-05,
+  "request_id": "851f55ac-2b8a-4780-8e08-d514592b63fa"
+}

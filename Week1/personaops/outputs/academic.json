@@ -1,0 +1,14 @@
+{
+  "title": "Understanding LangChain",
+  "body": "LangChain is a framework designed to facilitate the development of applications that utilize language models. It allows developers to build applications that can interact with various data sources and APIs, enabling more complex and context-aware interactions. For example, a simple LangChain application could take user input, query a database for relevant information, and then generate a natural language response based on that data, effectively bridging the gap between structured data and human-like communication.",
+  "style": "academic_formal",
+  "citations": [],
+  "moderation_flags": [],
+  "tokens": {
+    "prompt": 177,
+    "completion": 116
+  },
+  "latency_ms": 4514,
+  "cost_est": 9.6e-05,
+  "request_id": "2d8bc5ee-dbeb-4366-943c-c0974b517341"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "What\u2019s the Buzz About LangChain?",
+  "body": "LangChain is like the ultimate toolkit for building apps that use language models. Imagine you\u2019re creating a chatbot that not only answers questions but also pulls info from a database. With LangChain, you can connect your language model to various data sources, making your bot super smart! Think of it as giving your chatbot a brain and a library at the same time. \ud83e\udde0\ud83d\udcda",
+  "style": "trend-savvy_influencer",
+  "citations": [],
+  "moderation_flags": [],
+  "tokens": {
+    "prompt": 185,
+    "completion": 116
+  },
+  "latency_ms": 4460,
+  "cost_est": 9.7e-05,
+  "request_id": "ebc5dfc2-34d7-4c57-9aff-8cd8fbaa60a5"
+}
