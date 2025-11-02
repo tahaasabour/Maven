@@ -1,0 +1,14 @@
+{
+  "title": "Code Like a Pro with Our AI Sidekick!",
+  "body": "Say goodbye to writer's block and hello to our AI-powered code completion tool! It\u2019s like having a coding buddy who knows exactly what you need\u2014before you even do. With machine learning magic, it understands your context and serves up relevant suggestions in real-time. Get ready to write better code, faster, and maybe even impress your cat while you\u2019re at it!",
+  "style": "witty_marketer",
+  "citations": [],
+  "moderation_flags": [],
+  "tokens": {
+    "prompt": 201,
+    "completion": 112
+  },
+  "latency_ms": 5426,
+  "cost_est": 9.7e-05,
+  "request_id": "de40b7d3-5c22-4a00-a0c4-f2b3b0cd9e13"
+}

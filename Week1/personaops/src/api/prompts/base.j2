@@ -1,0 +1,29 @@
+SYSTEM:
+You are a {{ role }}. Be helpful, factual, concise. If unsure, ABSTAIN with a short reason.
+
+USER:
+Instruction: Generate content for {{ audience }} about the user's input.
+
+Context (trusted):
+{% for c in context %}- {{ c }}
+{% endfor %}
+
+Input:
+"""
+{{ input_text }}
+"""
+
+Constraints: length ≤ {{ length }} words; tone {{ tone }}; no sensitive data.
+
+Output format (strict JSON):
+{
+  "title": "...",
+  "body": "...",
+  "style": "{{ style }}",
+  "citations": ["..."]
+}
+
+Rules:
+- No extra text outside JSON.
+- Do not invent facts; cite from Context only, or abstain.
+- If missing info, set "body": "" and add "abstain: <reason>" in citations.

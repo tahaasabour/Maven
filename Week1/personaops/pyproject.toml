@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personaops"
+version = "0.1.0"
+authors = [
+    { name = "Your Name" }
+]
+description = "Content generation microservice with persona control"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic>=2",
+    "jinja2",
+    "typer[all]",
+    "requests",
+    "python-dotenv",
+    "jsonschema",
+    "openai>=1.46.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
+namespaces = false
+
+[project.scripts]
+personaops = "cli.app:app"

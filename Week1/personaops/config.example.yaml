@@ -1,0 +1,19 @@
+# API Provider Keys
+openai:
+  api_key: "sk-..." # Set via OPENAI_API_KEY env var
+  
+# Model Configuration
+default_model: "gpt-4o-mini"
+model_prices:
+  gpt-4o-mini:
+    input: 0.00015  # USD per 1K tokens
+    output: 0.0006
+
+# Request Limits
+max_input_length: 1000
+max_output_length: 500
+timeout_seconds: 60
+
+# Logging
+log_path: "logs/runs.jsonl"
+log_level: "INFO"

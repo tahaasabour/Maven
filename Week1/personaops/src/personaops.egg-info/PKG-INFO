@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: personaops
+Version: 0.1.0
+Summary: Content generation microservice with persona control
+Author: Your Name
+Requires-Python: >=3.10
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
+Requires-Dist: pydantic>=2
+Requires-Dist: jinja2
+Requires-Dist: typer[all]
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: jsonschema
+Requires-Dist: openai>=1.46.0

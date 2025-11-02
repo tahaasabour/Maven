@@ -1,0 +1,1 @@
+{"provider": "openai", "model": "gpt-4o-mini", "latency_ms": 5426, "tokens": {"prompt": 201, "completion": 112}, "cost_est": 9.7e-05, "req": "de40b7d3-5c22-4a00-a0c4-f2b3b0cd9e13"}

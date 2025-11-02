@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic>=2
+jinja2
+typer[all]
+requests
+python-dotenv
+jsonschema
+openai>=1.46.0
