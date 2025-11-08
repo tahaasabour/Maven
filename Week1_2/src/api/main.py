@@ -1,0 +1,59 @@
+
+
+from fastapi import FastAPI, HTTPException
+from api.models.generaterequest import GenerateRequest
+from api.models.generateresponse import GenerateResponse
+from api.utils import extract_json
+from .llm_manager import call_model
+from .moderation import pre_redact_pii, post_moderate
+from .prompts_templates.prompt_template_helper import prompt_template_helper
+from pathlib import Path
+
+
+
+app = FastAPI()
+
+
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
+
+
+@app.post("/generate", response_model= GenerateResponse)
+async def generate_text(payload: GenerateRequest):
+    try:
+        prompt = payload.input_text
+        redacted_prompt = pre_redact_pii(prompt)
+        payload.input_text = redacted_prompt
+
+        prompt_templates_path = str(Path(__file__).parent / "prompts_templates")
+        target_prompt_template = payload.persona.value.split("_")[0] + ".j2"
+        
+        rendered_prompt = prompt_template_helper.render_template(
+            template_path=prompt_templates_path,
+            template_name=target_prompt_template,
+            context=
+            {
+                "input_text": redacted_prompt, 
+                "persona": payload.persona,
+                "role": payload.persona, 
+                "tone": "balanced", 
+                "audience": payload.audience, 
+                "context": payload.context, 
+                "length": payload.length
+            }
+        )
+
+
+        model_data  =  {
+            "provider": payload.provider,
+            "model": payload.model,
+            "prompt": rendered_prompt,
+        }
+        response = call_model(model_data)
+
+        moderated_response = post_moderate(response)
+        return moderated_response
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

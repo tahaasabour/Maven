@@ -1,0 +1,51 @@
+{
+  "text": "{\n  \"title\": \"Unlocking the Secrets of Prompt Engineering\",\n  \"body\": \"Prompt Engineering is the magical art of crafting the perfect prompts to coax out the best responses from AI. Imagine being a conversation magician, where your words are the wand that makes the AI dance! With just the right phrasing, you can summon insightful answers or witty banter. It’s like giving the AI a roadmap to your brain—minus the GPS confusion. Whether you’re asking it to write poetry or solve complex problems, mastering this skill is your ticket to an AI-powered wonderland!\",\n  \"style\": \"witty_marketer\",\n  \"citations\": []\n}",
+  "usage": {
+    "completion_tokens": 134,
+    "prompt_tokens": 172,
+    "total_tokens": 306,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "raw": {
+    "id": "chatcmpl-CZX6NovwSW1urweR91r0u8xXvRXdi",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"title\": \"Unlocking the Secrets of Prompt Engineering\",\n  \"body\": \"Prompt Engineering is the magical art of crafting the perfect prompts to coax out the best responses from AI. Imagine being a conversation magician, where your words are the wand that makes the AI dance! With just the right phrasing, you can summon insightful answers or witty banter. It’s like giving the AI a roadmap to your brain—minus the GPS confusion. Whether you’re asking it to write poetry or solve complex problems, mastering this skill is your ticket to an AI-powered wonderland!\",\n  \"style\": \"witty_marketer\",\n  \"citations\": []\n}"
+        }
+      }
+    ],
+    "created": 1762584759,
+    "model": "gpt-4o-mini-2024-07-18",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_560af6e559",
+    "usage": {
+      "completion_tokens": 134,
+      "prompt_tokens": 172,
+      "total_tokens": 306,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0
+      }
+    }
+  }
+}

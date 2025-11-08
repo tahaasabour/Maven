@@ -1,0 +1,23 @@
+[project]
+name = "week1-2"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Taha Abd El Sabour",email = "taha.ali@roboost.app"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic (>=2.12.4,<3.0.0)",
+    "jinja2 (>=3.1.6,<4.0.0)",
+    "fastapi (>=0.121.0,<0.122.0)",
+    "uvicorn (>=0.38.0,<0.39.0)",
+    "openai (>=2.7.1,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "week1_2", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
