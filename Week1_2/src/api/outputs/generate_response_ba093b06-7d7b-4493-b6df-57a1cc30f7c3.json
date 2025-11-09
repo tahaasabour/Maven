@@ -1,0 +1,16 @@
+{
+    "title": "Meet Mohamed Fawy Al Noby!",
+    "body": "",
+    "style": "witty_marketer",
+    "citations": [
+        "abstain: Insufficient information provided about Mohamed Fawy Al Noby."
+    ],
+    "tokens": {
+        "prompt": 181,
+        "completion": 52
+    },
+    "latency_ms": 5,
+    "cost_est": 5.8e-05,
+    "request_id": "ba093b06-7d7b-4493-b6df-57a1cc30f7c3",
+    "moderation_flags": []
+}

@@ -1,0 +1,16 @@
+{
+    "title": "A Lesson in Friendship, Not Foes!",
+    "body": "",
+    "style": "witty_marketer",
+    "citations": [
+        "abstain: Context does not support violent language or actions."
+    ],
+    "tokens": {
+        "prompt": 174,
+        "completion": 50
+    },
+    "latency_ms": 104,
+    "cost_est": 5.6e-05,
+    "request_id": "8e54a19e-2b96-4dff-a5b4-e3b134e4f65d",
+    "moderation_flags": []
+}

@@ -1,25 +1,41 @@
 
+import json
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from api.llm import hugging_face_moderator
 from .models.generaterequest import GenerateRequest
 from .models.generateresponse import GenerateResponse
 from .llm.general_prompt_moderator import general_prompt_moderator
-from .llm.openai_moderator import openai_moderator
-from .llm.prompt_moderator import prompt_moderator
-from .llm.llm_moderator import llm_moderator
 from .prompts_templates.prompt_template_helper import prompt_template_helper
 from pathlib import Path
 from .llm.ll_service import llm_service
 from .llm.hugging_face_moderator import hugging_face_moderator
 from .utils import save_json_to_file
-from .utils import write_log_to_file
 import time
 import logging
 
 
-logging.basicConfig(level=logging.INFO)
+
+class JsonFormatter(logging.Formatter):
+    def format(self, record):
+        log_record = {
+            "timestamp": self.formatTime(record, self.datefmt),
+            "level": record.levelname,
+            "message": record.getMessage(),
+        }
+        if hasattr(record, "extra_data"):
+            log_record.update(record.extra_data)
+        return json.dumps(log_record)
+
+
+
+
+log_file_path = Path(__file__).parent / "logs.json"
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+file_handler = logging.FileHandler(log_file_path, mode="a")
+file_handler.setFormatter(JsonFormatter())
+logger.addHandler(file_handler)
 
 
 app = FastAPI()
@@ -42,7 +58,6 @@ async def log_requests(request: Request, call_next):
                 pass
         response = await call_next(request)
         process_time = (time.time() - start_time) * 1000
-
         log_data = {
             "method": request.method,
             "url": str(request.url),
@@ -52,13 +67,12 @@ async def log_requests(request: Request, call_next):
             "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
             "request_body": body.decode("utf-8") if body else None
         }
-        write_log_to_file(log_data)
+        
+        logger.info(f"{log_data}")
         return response
         
     except Exception as e:
         logger.error(f"Middleware error: {e}", exc_info=True)
-        await write_log_to_file({"error": f"Middleware error: {str(e)}"})
-        
         return JSONResponse(
             status_code=500,
             content={"detail": "Internal server error"}
