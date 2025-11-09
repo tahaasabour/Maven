@@ -2,6 +2,10 @@
 import json
 import re
 from pathlib import Path
+import logging
+
+
+
 
 def extract_json(text: str) -> dict:
     """Extract JSON from model output."""
@@ -23,3 +27,13 @@ def save_json_to_file(data: dict,folder_name:str, file_name: str) -> None:
             json.dump(data, f, indent=4,  ensure_ascii=False)
     except Exception as e:
         raise RuntimeError(f"Failed to save JSON to file: {e}")
+
+
+def write_log_to_file(data: dict):
+    try:
+        LOG_FILE = Path(__file__).parent / "requests_log.jsonl"
+        LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with LOG_FILE.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(data) + "\n")
+    except Exception as e:
+        raise RuntimeError(f"Logging operation failed :{e}")

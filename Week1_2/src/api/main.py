@@ -1,5 +1,6 @@
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import JSONResponse
 from api.llm import hugging_face_moderator
 from .models.generaterequest import GenerateRequest
 from .models.generateresponse import GenerateResponse
@@ -12,9 +13,58 @@ from pathlib import Path
 from .llm.ll_service import llm_service
 from .llm.hugging_face_moderator import hugging_face_moderator
 from .utils import save_json_to_file
+from .utils import write_log_to_file
+import time
+import logging
+
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 app = FastAPI()
+
+
+
+
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    start_time = time.time()
+    try:
+        body = None
+        if request.method in ["POST", "PUT", "PATCH"]:
+            try:
+                body = await request.body()
+                async def receive():
+                    return {"type": "http.request", "body": body, "more_body": False}
+                request._receive = receive
+            except Exception:
+                pass
+        response = await call_next(request)
+        process_time = (time.time() - start_time) * 1000
+
+        log_data = {
+            "method": request.method,
+            "url": str(request.url),
+            "status_code": response.status_code,
+            "process_time_ms": round(process_time, 2),
+            "client": request.client.host if request.client else None,
+            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "request_body": body.decode("utf-8") if body else None
+        }
+        write_log_to_file(log_data)
+        return response
+        
+    except Exception as e:
+        logger.error(f"Middleware error: {e}", exc_info=True)
+        await write_log_to_file({"error": f"Middleware error: {str(e)}"})
+        
+        return JSONResponse(
+            status_code=500,
+            content={"detail": "Internal server error"}
+        )
+   
+
 
 
 @app.get("/health")
@@ -64,9 +114,19 @@ async def generate_text(payload: GenerateRequest):
         save_json_to_file(
             data=moderated_response,
             folder_name=Path(__file__).parent / "outputs",
-            file_name=f"generate_response_{moderated_response.get("request_id")}.json"
+            file_name=f"generate_response_{moderated_response.get('request_id')}.json"
         )
         return moderated_response
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    logger.error(f"Unhandled exception: {exc}", exc_info=True)
+    return JSONResponse(
+        status_code=500,
+        content={"detail": "Internal server error"}
+    )

@@ -1,0 +1,16 @@
+{
+    "title": "A Playful Approach to Classroom Rivalries",
+    "body": "",
+    "style": "witty_marketer",
+    "citations": [
+        "abstain: Input suggests harmful intent."
+    ],
+    "tokens": {
+        "prompt": 174,
+        "completion": 46
+    },
+    "latency_ms": 4,
+    "cost_est": 5.4e-05,
+    "request_id": "f45fd547-77d5-4663-abc9-8088da2b7637",
+    "moderation_flags": []
+}

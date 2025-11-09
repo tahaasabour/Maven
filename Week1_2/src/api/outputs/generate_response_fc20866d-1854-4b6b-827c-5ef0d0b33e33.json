@@ -1,0 +1,16 @@
+{
+    "title": "Classroom Antics: Let's Keep it Fun!",
+    "body": "",
+    "style": "witty_marketer",
+    "citations": [
+        "abstain: Sensitive topic regarding violence."
+    ],
+    "tokens": {
+        "prompt": 174,
+        "completion": 47
+    },
+    "latency_ms": 5,
+    "cost_est": 5.4e-05,
+    "request_id": "fc20866d-1854-4b6b-827c-5ef0d0b33e33",
+    "moderation_flags": []
+}
