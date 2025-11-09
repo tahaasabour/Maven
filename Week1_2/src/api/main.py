@@ -1,13 +1,17 @@
 
-
 from fastapi import FastAPI, HTTPException
-from api.models.generaterequest import GenerateRequest
-from api.models.generateresponse import GenerateResponse
-from .llm.moderation import pre_redact_pii, post_moderate
+
+from api.llm import hugging_face_moderator
+from .models.generaterequest import GenerateRequest
+from .models.generateresponse import GenerateResponse
+from .llm.general_prompt_moderator import general_prompt_moderator
+from .llm.openai_moderator import openai_moderator
+from .llm.prompt_moderator import prompt_moderator
+from .llm.llm_moderator import llm_moderator
 from .prompts_templates.prompt_template_helper import prompt_template_helper
 from pathlib import Path
 from .llm.ll_service import llm_service
-
+from .llm.hugging_face_moderator import hugging_face_moderator
 
 
 app = FastAPI()
@@ -22,7 +26,7 @@ async def health_check():
 async def generate_text(payload: GenerateRequest):
     try:
         prompt = payload.input_text
-        redacted_prompt = pre_redact_pii(prompt)
+        redacted_prompt = general_prompt_moderator().pre_redact_pii(prompt)
         payload.input_text = redacted_prompt
 
         prompt_templates_path = str(Path(__file__).parent / "prompts_templates")
@@ -52,8 +56,8 @@ async def generate_text(payload: GenerateRequest):
 
         response = llm_service().call_model(model_data)
 
-      
-        moderated_response = post_moderate(response)
+
+        moderated_response = hugging_face_moderator().moderate(response)
         return moderated_response
 
     except Exception as e:
