@@ -11,21 +11,13 @@ from pathlib import Path
 from .llm.ll_service import llm_service
 from .llm.hugging_face_moderator import hugging_face_moderator
 from .utils import save_json_to_file
+from .json_formatter import JsonFormatter
 import time
 import logging
 
 
 
-class JsonFormatter(logging.Formatter):
-    def format(self, record):
-        log_record = {
-            "timestamp": self.formatTime(record, self.datefmt),
-            "level": record.levelname,
-            "message": record.getMessage(),
-        }
-        if hasattr(record, "extra_data"):
-            log_record.update(record.extra_data)
-        return json.dumps(log_record)
+
 
 
 
@@ -37,6 +29,7 @@ file_handler = logging.FileHandler(log_file_path, mode="a")
 file_handler.setFormatter(JsonFormatter())
 logger.addHandler(file_handler)
 
+logger.propagate = False
 
 app = FastAPI()
 
