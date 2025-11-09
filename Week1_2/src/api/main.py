@@ -1,6 +1,5 @@
 
 from fastapi import FastAPI, HTTPException
-
 from api.llm import hugging_face_moderator
 from .models.generaterequest import GenerateRequest
 from .models.generateresponse import GenerateResponse
@@ -12,6 +11,7 @@ from .prompts_templates.prompt_template_helper import prompt_template_helper
 from pathlib import Path
 from .llm.ll_service import llm_service
 from .llm.hugging_face_moderator import hugging_face_moderator
+from .utils import save_json_to_file
 
 
 app = FastAPI()
@@ -58,6 +58,14 @@ async def generate_text(payload: GenerateRequest):
 
 
         moderated_response = hugging_face_moderator().moderate(response)
+
+        print(moderated_response)
+        
+        save_json_to_file(
+            data=moderated_response,
+            folder_name=Path(__file__).parent / "outputs",
+            file_name=f"generate_response_{moderated_response.get("request_id")}.json"
+        )
         return moderated_response
 
     except Exception as e:
