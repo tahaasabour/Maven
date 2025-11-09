@@ -1,0 +1,16 @@
+{
+    "title": "The Nubian Chronicles",
+    "body": "",
+    "style": "witty_marketer",
+    "citations": [
+        "abstain: Insufficient information on Nubian people provided."
+    ],
+    "tokens": {
+        "prompt": 176,
+        "completion": 46
+    },
+    "latency_ms": 4,
+    "cost_est": 5.4e-05,
+    "request_id": "cb1dea78-36af-43aa-ab3b-4234c49c57dd",
+    "moderation_flags": []
+}

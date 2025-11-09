@@ -61,7 +61,7 @@ async def log_requests(request: Request, call_next):
             "request_body": body.decode("utf-8") if body else None
         }
         
-        logger.info(f"{log_data}")
+        logger.info("Request processed", extra={"extra_data": log_data})
         return response
         
     except Exception as e:

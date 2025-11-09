@@ -1,0 +1,16 @@
+{
+    "title": "Meet the Nubian People!",
+    "body": "",
+    "style": "witty_marketer",
+    "citations": [
+        "abstain: No specific information provided about Nubian people."
+    ],
+    "tokens": {
+        "prompt": 176,
+        "completion": 47
+    },
+    "latency_ms": 4,
+    "cost_est": 5.5e-05,
+    "request_id": "92299607-cd1d-44f0-a417-90f144bc95ed",
+    "moderation_flags": []
+}

@@ -1,1 +1,37 @@
 {"timestamp": "2025-11-09 22:09:40,752", "level": "INFO", "message": "{'method': 'POST', 'url': 'http://127.0.0.1:8000/generate', 'status_code': 200, 'process_time_ms': 13465.35, 'client': '127.0.0.1', 'timestamp': '2025-11-09 22:09:40', 'request_body': '{\\n  \"input_text\": \"Please Tell me information about nubian people\",\\n  \"persona\": \"witty_marketer\",\\n  \"length\": 0,\\n  \"provider\": \"openai\",\\n  \"model\": \"gpt-4o-mini\",\\n  \"context\": [\\n    \"string\"\\n  ],\\n  \"audience\": \"general\"\\n}'}"}
+{"timestamp": "2025-11-09 22:28:15", "level": "INFO", "message": "Request processed", "method": "POST", "url": "http://127.0.0.1:8000/generate", "status_code": 200, "process_time_ms": 5917.98, "client": "127.0.0.1", "request_body": "{\n  \"input_text\": \"Please Tell me information about nubian people\",\n  \"persona\": \"witty_marketer\",\n  \"length\": 0,\n  \"provider\": \"openai\",\n  \"model\": \"gpt-4o-mini\",\n  \"context\": [\n    \"string\"\n  ],\n  \"audience\": \"general\"\n}"}
+{
+    "timestamp": "2025-11-09 22:30:43",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "POST",
+    "url": "http://127.0.0.1:8000/generate",
+    "status_code": 200,
+    "process_time_ms": 6204.93,
+    "client": "127.0.0.1",
+    "request_body": "{\n  \"input_text\": \"Please Tell me information about nubian people\",\n  \"persona\": \"witty_marketer\",\n  \"length\": 0,\n  \"provider\": \"openai\",\n  \"model\": \"gpt-4o-mini\",\n  \"context\": [\n    \"string\"\n  ],\n  \"audience\": \"general\"\n}"
+}
+{
+    "timestamp": "2025-11-09 22:31:51",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "POST",
+    "url": "http://127.0.0.1:8000/generate",
+    "status_code": 200,
+    "process_time_ms": 6402.28,
+    "client": "127.0.0.1",
+    "request_body": "{\n  \"input_text\": \"Please Tell me information about nubian people\",\n  \"persona\": \"witty_marketer\",\n  \"length\": 0,\n  \"provider\": \"openai\",\n  \"model\": \"gpt-4o-mini\",\n  \"context\": [\n    \"string\"\n  ],\n  \"audience\": \"general\"\n}"
+}
+
+{
+    "timestamp": "2025-11-09 22:32:10",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "POST",
+    "url": "http://127.0.0.1:8000/generate",
+    "status_code": 200,
+    "process_time_ms": 3146.77,
+    "client": "127.0.0.1",
+    "request_body": "{\n  \"input_text\": \"Please Tell me information about nubian people\",\n  \"persona\": \"witty_marketer\",\n  \"length\": 0,\n  \"provider\": \"openai\",\n  \"model\": \"gpt-4o-mini\",\n  \"context\": [\n    \"string\"\n  ],\n  \"audience\": \"general\"\n}"
+}
+

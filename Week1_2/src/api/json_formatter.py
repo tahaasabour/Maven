@@ -10,4 +10,4 @@ class JsonFormatter(logging.Formatter):
         }
         if hasattr(record, "extra_data"):
             log_record.update(record.extra_data)
-        return json.dumps(log_record)
+        return json.dumps(log_record, indent=4)+"\n"

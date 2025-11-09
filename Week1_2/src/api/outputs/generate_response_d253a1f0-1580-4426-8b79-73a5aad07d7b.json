@@ -1,0 +1,16 @@
+{
+    "title": "Discovering Nubian People!",
+    "body": "",
+    "style": "witty_marketer",
+    "citations": [
+        "abstain: Insufficient information provided about Nubian people."
+    ],
+    "tokens": {
+        "prompt": 176,
+        "completion": 47
+    },
+    "latency_ms": 2,
+    "cost_est": 5.5e-05,
+    "request_id": "d253a1f0-1580-4426-8b79-73a5aad07d7b",
+    "moderation_flags": []
+}

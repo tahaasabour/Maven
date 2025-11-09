@@ -1,0 +1,16 @@
+{
+    "title": "Nubian People: A Glimpse into Rich Heritage",
+    "body": "",
+    "style": "witty_marketer",
+    "citations": [
+        "abstain: Insufficient information provided about Nubian people."
+    ],
+    "tokens": {
+        "prompt": 176,
+        "completion": 53
+    },
+    "latency_ms": 4,
+    "cost_est": 5.8e-05,
+    "request_id": "8ec521b6-6f44-4830-9786-980a463ea207",
+    "moderation_flags": []
+}
