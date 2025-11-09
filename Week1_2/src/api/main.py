@@ -1,5 +1,4 @@
 
-import json
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from api.llm import hugging_face_moderator
@@ -17,23 +16,15 @@ import logging
 
 
 
-
-
-
-
-
 log_file_path = Path(__file__).parent / "logs.json"
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 file_handler = logging.FileHandler(log_file_path, mode="a")
 file_handler.setFormatter(JsonFormatter())
 logger.addHandler(file_handler)
-
 logger.propagate = False
 
 app = FastAPI()
-
-
 
 
 @app.middleware("http")

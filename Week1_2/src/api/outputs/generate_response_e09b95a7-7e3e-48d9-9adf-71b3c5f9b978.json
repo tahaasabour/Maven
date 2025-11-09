@@ -1,0 +1,16 @@
+{
+    "title": "Meet the Nubian People!",
+    "body": "",
+    "style": "witty_marketer",
+    "citations": [
+        "abstain: Insufficient information provided about Nubian people."
+    ],
+    "tokens": {
+        "prompt": 176,
+        "completion": 47
+    },
+    "latency_ms": 2,
+    "cost_est": 5.5e-05,
+    "request_id": "e09b95a7-7e3e-48d9-9adf-71b3c5f9b978",
+    "moderation_flags": []
+}
