@@ -1,6 +1,6 @@
 
-from .openai_provider import openai_provider
-from .llm_provider import LLMProvider
+from .implementations.openai_provider import openai_provider
+from .protocols.llm_provider import LLMProvider
 
 
 class provider_factory:

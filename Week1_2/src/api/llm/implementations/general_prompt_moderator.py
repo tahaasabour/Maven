@@ -1,5 +1,5 @@
 
-from .pii_patterns import PII_PATTERNS
+from ..configs.pii_patterns import PII_PATTERNS
 
 class general_prompt_moderator:
     def pre_redact_pii(self, text: str) -> str:

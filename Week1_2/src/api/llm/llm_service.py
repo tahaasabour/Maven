@@ -4,7 +4,7 @@ from typing import Any
 import time
 import uuid
 from .provider_factory import provider_factory
-from .model_prices import MODEL_PRICES
+from .configs.model_prices import MODEL_PRICES
 import json
 
 class llm_service:
