@@ -3,11 +3,10 @@
 from fastapi import FastAPI, HTTPException
 from api.models.generaterequest import GenerateRequest
 from api.models.generateresponse import GenerateResponse
-from api.utils import extract_json
-from .llm_manager import call_model
-from .moderation import pre_redact_pii, post_moderate
+from .llm.moderation import pre_redact_pii, post_moderate
 from .prompts_templates.prompt_template_helper import prompt_template_helper
 from pathlib import Path
+from .llm.ll_service import llm_service
 
 
 
@@ -50,8 +49,10 @@ async def generate_text(payload: GenerateRequest):
             "model": payload.model,
             "prompt": rendered_prompt,
         }
-        response = call_model(model_data)
 
+        response = llm_service().call_model(model_data)
+
+      
         moderated_response = post_moderate(response)
         return moderated_response
 
