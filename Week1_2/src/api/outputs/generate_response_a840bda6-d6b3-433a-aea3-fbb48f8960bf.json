@@ -1,0 +1,14 @@
+{
+    "title": "Unpacking the Factory Pattern: Your Design Blueprint",
+    "body": "Imagine a factory where each machine specializes in creating a specific product, just like the Factory Design Pattern in software development! This pattern provides a way to encapsulate the instantiation process of objects, allowing you to create families of related or dependent objects without specifying their concrete classes. It's like having a menu at a restaurant – you order a dish without worrying about the kitchen’s secrets. This leads to cleaner code and easier maintenance, so you can focus on the fun stuff, like making your app shine! 🍽️",
+    "style": "witty_marketer",
+    "citations": [],
+    "tokens": {
+        "prompt": 177,
+        "completion": 141
+    },
+    "latency_ms": 5,
+    "cost_est": 0.000111,
+    "request_id": "a840bda6-d6b3-433a-aea3-fbb48f8960bf",
+    "moderation_flags": []
+}

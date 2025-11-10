@@ -1,12 +1,204 @@
 {
-    "timestamp": "2025-11-10 09:48:22",
+    "timestamp": "2025-11-10 10:32:20",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/docs",
+    "status_code": 200,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:20",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/openapi.json",
+    "status_code": 200,
+    "process_time_ms": 2.54,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:22",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/docs",
+    "status_code": 200,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:22",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/openapi.json",
+    "status_code": 200,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:24",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/docs",
+    "status_code": 200,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:24",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/openapi.json",
+    "status_code": 200,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:33",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/docs",
+    "status_code": 200,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:33",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/openapi.json",
+    "status_code": 200,
+    "process_time_ms": 2.01,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:34",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/docs",
+    "status_code": 200,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:35",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/openapi.json",
+    "status_code": 200,
+    "process_time_ms": 1.01,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:38",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/",
+    "status_code": 404,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:38",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/favicon.ico",
+    "status_code": 404,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:42",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/docs",
+    "status_code": 200,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:32:42",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/openapi.json",
+    "status_code": 200,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:37:01",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/docs",
+    "status_code": 200,
+    "process_time_ms": 0.0,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:37:01",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/openapi.json",
+    "status_code": 200,
+    "process_time_ms": 19.89,
+    "client": "127.0.0.1",
+    "request_body": null
+}
+
+{
+    "timestamp": "2025-11-10 10:37:46",
     "level": "INFO",
     "message": "Request processed",
     "method": "POST",
     "url": "http://127.0.0.1:8000/generate",
     "status_code": 200,
-    "process_time_ms": 2791.73,
+    "process_time_ms": 7626.48,
     "client": "127.0.0.1",
-    "request_body": "{\n  \"input_text\": \"Please Tell me information about nubian people\",\n  \"persona\": \"witty_marketer\",\n  \"length\": 0,\n  \"provider\": \"openai\",\n  \"model\": \"gpt-4o-mini\",\n  \"context\": [\n    \"string\"\n  ],\n  \"audience\": \"general\"\n}"
+    "request_body": "{\n  \"input_text\": \"Tell Me Please More about Factory pattern Design Pattern\",\n  \"persona\": \"witty_marketer\",\n  \"length\": 0,\n  \"provider\": \"openai\",\n  \"model\": \"gpt-4o-mini\",\n  \"context\": [\n    \"string\"\n  ],\n  \"audience\": \"general\"\n}"
 }
 
