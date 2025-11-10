@@ -25,8 +25,4 @@ app = FastAPI()
 app.middleware("http")(log_requests)
 app.exception_handler(Exception)(global_exception_handler)
 
-
-router = APIRouter(prefix="/generate", tags=["Generate"])
 app.include_router(content_generation_controller.router)
-
-

@@ -1,0 +1,16 @@
+{
+    "title": "Mathematics for Machine Learning",
+    "body": "",
+    "style": "academic_formal",
+    "citations": [
+        "abstain: Insufficient information to provide a detailed explanation."
+    ],
+    "tokens": {
+        "prompt": 173,
+        "completion": 47
+    },
+    "latency_ms": 5,
+    "cost_est": 5.4e-05,
+    "request_id": "bb50e091-906b-436f-b2a1-8d9013857071",
+    "moderation_flags": []
+}

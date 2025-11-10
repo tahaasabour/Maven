@@ -10,3 +10,15 @@
     "request_body": "{\n  \"input_text\": \"Tell me more about prompt engineering\",\n  \"persona\": \"witty_marketer\",\n  \"audience\": \"devs\",\n  \"length\": 120,\n  \"provider\": \"openai\",\n  \"model\": \"gpt-4o-mini\",\n  \"context\": []\n}"
 }
 
+{
+    "timestamp": "2025-11-10 13:25:37",
+    "level": "INFO",
+    "message": "Request processed",
+    "method": "POST",
+    "url": "http://127.0.0.1:8000/generate",
+    "status_code": 200,
+    "process_time_ms": 5498.63,
+    "client": "127.0.0.1",
+    "request_body": "{\"input_text\": \"What do you know about Nubian People\", \"persona\": \"witty_marketer\", \"audience\": \"general\", \"provider\": \"openai\", \"model\": \"gpt-4o-mini\", \"length\": 120}"
+}
+

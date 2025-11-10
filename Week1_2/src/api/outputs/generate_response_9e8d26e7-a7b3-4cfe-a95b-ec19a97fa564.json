@@ -1,0 +1,14 @@
+{
+    "title": "Math for Machine Learning: The Secret Sauce",
+    "body": "Math for Machine Learning is like the secret ingredient in grandma's cookie recipe - essential but often overlooked! At its core, it combines linear algebra, calculus, probability, and statistics to help machines learn from data. Think of linear algebra as the backbone that organizes data into matrices, calculus as the tool that optimizes algorithms, and probability as the crystal ball that predicts outcomes. If you want to bake a perfect model, you need to measure, mix, and model your ingredients just right!",
+    "style": "witty_marketer",
+    "citations": [],
+    "tokens": {
+        "prompt": 176,
+        "completion": 134
+    },
+    "latency_ms": 6,
+    "cost_est": 0.000107,
+    "request_id": "9e8d26e7-a7b3-4cfe-a95b-ec19a97fa564",
+    "moderation_flags": []
+}
