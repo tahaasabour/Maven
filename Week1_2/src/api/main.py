@@ -22,7 +22,7 @@ logger.setLevel(logging.INFO)
 file_handler = logging.FileHandler(log_file_path, mode="a")
 file_handler.setFormatter(JsonFormatter())
 logger.addHandler(file_handler)
-logger.propagate = False
+
 
 app = FastAPI()
 
