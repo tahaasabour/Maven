@@ -16,12 +16,10 @@ router = APIRouter(prefix="/generate", tags=["Generate"])
 @router.post("", response_model=GenerateResponse)
 async def generate_text(payload: GenerateRequest):
     try:
-        # Step 1: Moderate and redact PII
         prompt = payload.input_text
         redacted_prompt = general_prompt_moderator().pre_redact_pii(prompt)
         payload.input_text = redacted_prompt
 
-        # Step 2: Render prompt from template
         prompt_templates_path = str(Path(__file__).parent.parent / "prompts_templates")
         target_prompt_template = payload.persona.value.split("_")[0] + ".j2"
         
@@ -39,7 +37,6 @@ async def generate_text(payload: GenerateRequest):
             }
         )
 
-        # Step 3: Call model
         model_data = {
             "provider": payload.provider,
             "model": payload.model,
@@ -47,10 +44,8 @@ async def generate_text(payload: GenerateRequest):
         }
         response = llm_service().call_model(model_data)
 
-        # Step 4: Moderate model output
         moderated_response = hugging_face_moderator().moderate(response)
 
-        # Step 5: Save response to file
         save_json_to_file(
             data=moderated_response,
             folder_name=Path(__file__).parent.parent / "outputs",
