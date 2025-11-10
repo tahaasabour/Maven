@@ -1,0 +1,2 @@
+{"timestamp": "2025-11-10 13:25:32,065", "level": "INFO", "module": "cli.commands.generate", "message": "Generating content with 'witty_marketer' persona using openai..."}
+{"timestamp": "2025-11-10 13:25:37,598", "level": "INFO", "module": "cli.commands.generate", "message": "Content generated successfully: 2b9094e8-f6e2-4f98-a3c2-d52f2271d993"}

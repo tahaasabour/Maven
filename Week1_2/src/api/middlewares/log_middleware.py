@@ -3,7 +3,7 @@ import logging
 from pathlib import Path
 from fastapi import Request
 from fastapi.responses import JSONResponse
-from ..helpers.json_formatter import JsonFormatter  # adjust import if needed
+from ..helpers.json_formatter import JsonFormatter  
 
 log_file_path = Path(__file__).parent.parent / "logs.json"
 

@@ -8,6 +8,9 @@ from ..prompts_templates.prompt_template_helper import prompt_template_helper
 from ..llm.llm_service import llm_service
 from ..llm.implementations.hugging_face_moderator import hugging_face_moderator
 from ..helpers.utils import save_json_to_file
+from ..llm.protocols.llm_moderator import llm_moderator
+from ..llm.protocols.prompt_moderator import prompt_moderator
+
 
 
 router = APIRouter(prefix="/generate", tags=["Generate"])
@@ -16,8 +19,12 @@ router = APIRouter(prefix="/generate", tags=["Generate"])
 @router.post("", response_model=GenerateResponse)
 async def generate_text(payload: GenerateRequest):
     try:
+
+        prmpt_modt:prompt_moderator=general_prompt_moderator()
+        llm_modt:llm_moderator=hugging_face_moderator()
+
         prompt = payload.input_text
-        redacted_prompt = general_prompt_moderator().pre_redact_pii(prompt)
+        redacted_prompt = prmpt_modt.pre_redact_pii(prompt)
         payload.input_text = redacted_prompt
 
         prompt_templates_path = str(Path(__file__).parent.parent / "prompts_templates")
@@ -44,7 +51,7 @@ async def generate_text(payload: GenerateRequest):
         }
         response = llm_service().call_model(model_data)
 
-        moderated_response = hugging_face_moderator().moderate(response)
+        moderated_response = llm_modt.moderate(response)
 
         save_json_to_file(
             data=moderated_response,

@@ -1,0 +1,14 @@
+{
+    "title": "Unlocking the Magic of Prompt Engineering",
+    "body": "Prompt engineering is like giving your AI a treasure map! It’s the art of crafting questions or commands that guide models like chatbots to deliver the gold you seek. Think of it as a recipe: the right ingredients (or prompts) lead to delicious outputs. It's all about precision and creativity – the better your prompt, the better your response. So, sharpen those wordsmith skills and watch your AI shine!",
+    "style": "witty_marketer",
+    "citations": [],
+    "tokens": {
+        "prompt": 173,
+        "completion": 118
+    },
+    "latency_ms": 9,
+    "cost_est": 9.7e-05,
+    "request_id": "aafce1f2-168d-4ce3-a064-4023ba865ba2",
+    "moderation_flags": []
+}
